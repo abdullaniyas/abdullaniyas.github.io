@@ -1,0 +1,12 @@
+
+$mysql_host = "mysql10.000webhost.com";
+$mysql_database = "a3902674_form";
+$mysql_user = "a3902674_n";
+$mysql_password = "qwerty1234";
+
+
+
+• Troubleshot developers code based on looking at the code and the ability to find the error that will fix issues. 
+• Implement updates on clients site as per requirement
+• Evaluate code to ensure it is valid and compatible across different browsers
+Operational monitoring and troubleshooting live events within agreed SLA

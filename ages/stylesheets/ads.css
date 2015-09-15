@@ -294,13 +294,13 @@ section > div {
   overflow: hidden;
   position: relative;
   width: 80%;
-  height: 350px;
+  height: 250px;
 }
 
 #slides ul {
   list-style: none;
   width: 100%;
-  height: 350px;
+  height: 250px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -805,6 +805,13 @@ footer p {
         text-align: center;
         width: 100%;
     }
+    #slides {
+        height: 350px;
+      }
+
+      #slides ul {
+        height: 350px;
+      }
     
 }
 @media screen and (max-width:580px) {

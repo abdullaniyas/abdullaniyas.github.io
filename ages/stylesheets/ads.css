@@ -294,13 +294,13 @@ section > div {
   overflow: hidden;
   position: relative;
   width: 80%;
-  height: 250px;
+  height: 350px;
 }
 
 #slides ul {
   list-style: none;
   width: 100%;
-  height: 250px;
+  height: 350px;
   margin: 0;
   padding: 0;
   position: relative;

@@ -271,11 +271,14 @@ function rotate() {
 }
 
 function isKeyPressed(event) {
-    if (event.altKey) {
-        if(event.shiftKey){
-            alert("The ALT key was pressed!");
+        if (event.altKey) {
+            if(event.shiftKey){
+                if(event.ctrlKey){
+                    //alert("The ALT key was pressed!");
+                    $('.developers-show').show();
+                }
+            }
+        } else {
+           // alert("The ALT key was NOT pressed!");
         }
-    } else {
-       // alert("The ALT key was NOT pressed!");
     }
-}

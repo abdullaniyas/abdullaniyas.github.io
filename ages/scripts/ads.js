@@ -269,3 +269,13 @@ $(document).ready(function () {
 function rotate() {
     $('#next').click();
 }
+
+function isKeyPressed(event) {
+    if (event.altKey) {
+        if(event.shiftKey){
+            alert("The ALT key was pressed!");
+        }
+    } else {
+       // alert("The ALT key was NOT pressed!");
+    }
+}

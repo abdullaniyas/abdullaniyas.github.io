@@ -275,7 +275,13 @@ section > div {
 /*    text-align: center;
     display: inline-block;*/
 }
+/**************** Developers Show ****************/
 
+.developers-show {
+    display: none;
+}
+
+/**************** Developers Show ****************/
 /* text slider */
 
 .text-slider {

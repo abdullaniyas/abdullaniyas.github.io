@@ -207,8 +207,10 @@ header {
     position: absolute;
     top: 8px;
     right: 10px;
-    background-color: #FFAE00;
-    //display: none;
+    background-image: url(../images/icons/bg-mobile-menu.png);
+    background-size: 100% auto;
+    background-position: center center;
+    display: none;
 }
 .menu {
     float : right;
@@ -273,6 +275,164 @@ section > div {
 /*    text-align: center;
     display: inline-block;*/
 }
+/**************** Developers Show ****************/
+
+.developers-show {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.83);
+    height: 100%;
+    width: 100%;
+    font-family: 'Rokkitt', serif;
+    color: #fff;
+    display: none;
+}
+.developers-show h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.developers-show h3 {
+    margin-left: 20px;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.developers-show h3 span {
+    font-family: 'Indie Flower', cursive;
+}
+.developers-show h3 span a:hover{
+    color: #CD69C6;
+}
+.developers-show div div img {
+    width: 100%;
+    height: auto;
+    border: solid 4px #534B45;
+}
+
+/**************** Developers Show ****************/
+/* text slider */
+
+.text-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:auto;
+}
+#carousel {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#slides {
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  height: 250px;
+}
+
+#slides ul {
+  list-style: none;
+  width: 100%;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#slides li {
+  width: 100%;
+  height: 250px;
+  float: left;
+  text-align: center;
+  position: relative;
+  font-family: lato, sans-serif;
+}
+
+/* Styling for prev and next buttons */
+
+.btn-bar {
+  width: 10%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+#buttons {
+  padding: 0 0 5px 0;
+  float: right;
+  width: 10%;
+}
+
+#buttons a {
+  text-align: center;
+  display: block;
+  font-size: 50px;
+  
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 9px;
+  width: 35px;
+}
+#buttons a#prev {
+    float: left;
+  outline: 0;
+  margin: 25px -60px;
+}
+#buttons a#next {
+    float: right;
+    outline: 0;
+  margin: 25px 60px;
+}
+a#prev:hover,
+a#next:hover {
+  color: #FFF;
+  text-shadow: .5px 0px #b14943;
+}
+
+.quote-phrase,
+.quote-author {
+  font-family: sans-serif;
+  font-weight: 300;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px 20px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+.quote-phrase {
+    height: auto;
+  min-height: 100px;
+  font-size: 24px;
+  color: #FFF;
+  font-style: italic;
+  text-shadow: .5px 0px #b14943;
+  margin-top: 0;
+}
+
+.quote-marks {
+  font-size: 30px;
+  padding: 0 3px 3px;
+  position: inherit;
+}
+
+.quote-author {
+  font-style: normal;
+  font-size: 34px;
+  color: #fff;
+  font-weight: 400;
+  height: 30px;
+  margin-bottom: 0;
+}
+
+.quoteContainer,
+.authorContainer {
+  display: table;
+  width: 80%;
+  margin-left: 10%;
+}
 /*.what-we-do {
     min-height: 400px;
 }*/
@@ -285,18 +445,21 @@ section > div {
     width: 50%;
     height: 100px;
     background-image: url(../images/icons/features.png);
+    background-repeat: no-repeat;
 }
 .feature-1 {
-    background-position: 4px 0;
+    background-image: url(../images/icons/database.png);
+    background-position: center center;
+    background-size: auto 68%;
 }
 .feature-2 {
-    background-position: -94px 0;
+    background-position: -294px 0;
 }
 .feature-3 {
     background-position: -194px 0;
 }
 .feature-4 {
-    background-position: -294px 0;
+    background-position: -94px 0;
 }
 .article h2 {
     margin: 0px auto;
@@ -646,8 +809,45 @@ footer p {
 }
 @media screen and (max-width:700px) {
     .menu {
-        width: 75%;
+        width: 100%;
+        margin-right: 0%;
+        height: 62px;
+        position: relative;
     }
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+    .desktop-menu {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        display: none;
+    }
+    
+    .desktop-menu li{
+        width: 100%;
+    }
+    .menu ul li {
+        margin: 3px 0;
+    }
+    .menu ul li a {
+        float: left;
+        padding: 4px 1px;
+        text-align: center;
+        width: 100%;
+    }
+    #slides {
+        height: 350px;
+      }
+
+      #slides ul {
+        height: 350px;
+      }
+    
 }
 @media screen and (max-width:580px) {
     .team {

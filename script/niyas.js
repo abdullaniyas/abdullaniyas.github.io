@@ -99,6 +99,8 @@ function initialize() {
         //center:new google.maps.LatLng(22.528610, 88.365451), //bangalore
         zoom: 14,
         mapTypeControl: false,
+		scrollwheel: false,
+		
         //scaleControl: false,
         panControl: false,
         streetViewControl: false,

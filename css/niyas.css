@@ -149,13 +149,15 @@ a {
     cursor: pointer;
 }
 .container {
-        width: 960px;
+        width: 100%;
         margin: 0 auto;
         position: relative;
 }
 header {
     position: relative;
     z-index: 95;
+	width: 960px;
+	margin:0 auto;
 }
 .my-name {
     border-right: 2px solid #4a4a4a;
@@ -179,8 +181,9 @@ header {
     letter-spacing: 2px;
 }
 .slide-menu {
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 960px;
+	top: 0;
 }
 .plus-icon {
     width: 57px;
@@ -197,6 +200,12 @@ header {
     height: 30px;
     margin: 14px;
     width: 30px;
+	overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+.plus-icon span:hover {
+	transform: rotate(360deg);
 }
 .plus-sign {
     background-image: url(../images/plus.png);
@@ -294,6 +303,10 @@ section > div {
 }
 .portfolio {
     margin-bottom: 30px;
+}
+.portfolio-tab {
+	width: 960px;
+	margin: 0 auto;
 }
 .portfolio h1 {
     text-align: center;
@@ -412,9 +425,9 @@ thumbs img
     height: auto;
 }
 .skills-meter {
-    width: 156px;
+    width: 135px;
     height: 185px;
-    margin: 10px 11px;
+    margin: 10px 33px;
     float: left;
 }
 .circliful {
@@ -612,4 +625,35 @@ footer p {
     color: #3a3a3a;
     margin: 5px auto;
     font-size: 13px;
+}
+@media screen and (max-width:960px) {
+	header {
+		width: 100%
+	}
+	.slide-menu {
+		width: 100%;
+	}
+	.home h1 {
+		font-size: 44px;
+		margin: 11px auto 0;
+	}
+	.grid figure { 
+		width: 48%;
+		height: 250px;
+	}
+	.portfolio-tab {
+		width: 100%;
+	}
+	.skill-achievement > .width-83p {
+		width: 100%;
+	}
+}
+@media screen and (max-width:630px) {
+	.grid figure { 
+		width: 98%;
+		height: 250px;
+	}
+	.resume-inner h1 {
+		font-size: 32px;
+	}
 }

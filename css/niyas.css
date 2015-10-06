@@ -184,6 +184,7 @@ header {
     position: fixed;
     width: 960px;
 	top: 0;
+	z-index: 1000;
 }
 .plus-icon {
     width: 57px;

@@ -2,32 +2,39 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		
-        <title>Abdulla Niyas | Freelance Web Developer</title>
-		
-		<meta name="description" content="Freelance Web Developer, Hybrid Mobile App Developer">
-		
-		<!-- Mobile Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
 
-		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,800' rel='stylesheet' type='text/css'>
-		
-		<!-- Style Sheets -->
-        
+        <title>Abdulla Niyas | Freelance Web Developer</title>
+
+        <meta name="description" content="Freelance Web Developer, Hybrid Mobile App Developer">
+
+        <!-- Mobile Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,  maximum-scale=1.0, user-scalable=no">
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Style Sheets -->
+
         <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />
         <link rel="stylesheet" type="text/css" href="css/set2.css" />
         <link type="text/css" rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/niyas.css" />
-		<!-- Jquery CDN -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        
+        <!-- Jquery CDN -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('customersCtrl', function($scope, $http) {
+            $http.get("data/cv.json")
+            .success(function (response) {$scope.cvs = response.records;});
+        });
+        </script>
     </head>
     <body>
         <div class="back-to-top" data-scroll-goto="0"></div>
@@ -183,10 +190,15 @@
                     <div class="resume-inner">
                         <div class="full-width pull-left skill-achievement">
                             <h1>Skill Achievement</h1>
-                            <div class="center-div width-83p">
-                                <div class="full-width pull-left">
+                            <div class="center-div width-83p" >
+                                <div class="full-width pull-left" >
+                                <!--<div class="full-width pull-left" ng-app="myApp" ng-controller="customersCtrl">
+                                    <div class="skills-meter" ng-repeat="x in cvs">
+                                        <div class="myStat pull-left" data-dimension="{{ x.dimension }}" data-text="{{ x.text }}" data-info="" data-width="{{ x.width }}" data-fontsize="{{ x.fontsize }}" data-percent="{{ x.percent }}" data-fgcolor="{{ x.fgcolor }}" data-bgcolor="{{ x.bgcolor }}" data-fill="{{ x.fill }}"></div>
+                                        <p>{{ x.Name }}</p>
+                                    </div>-->
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="85%" data-info="" data-width="22" data-fontsize="22" data-percent="90" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="90%" data-info="" data-width="22" data-fontsize="22" data-percent="90" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>HTML 5</p>
                                     </div>
                                     <div class="skills-meter">
@@ -194,7 +206,7 @@
                                         <p>CSS 3</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="65%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>PHP</p>
                                     </div>
                                     <div class="skills-meter">
@@ -206,26 +218,26 @@
                                         <p>JQUERY</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="55%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="65%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>ANGULAR JS</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="60" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="65%" data-info="" data-width="22" data-fontsize="22" data-percent="60" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>AJAX</p>
                                     </div>
-									<div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                    <div class="skills-meter">
+                                        <div class="myStat pull-left" data-dimension="135" data-text="70%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>JSON</p>
                                     </div>
-									<div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="85" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                    <div class="skills-meter">
+                                        <div class="myStat pull-left" data-dimension="135" data-text="80%" data-info="" data-width="22" data-fontsize="22" data-percent="85" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>GitHub</p>
                                     </div>
                                     <div class="skills-meter">
                                         <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>PHOTOSHOP</p>
                                     </div>
-									
+
                                 </div>
                             </div>
                         </div>
@@ -288,13 +300,13 @@
                             </fieldset>
                         </form>-->
                         <div id="result">
-<!--                            <div class='success-message'>
-                                <span class='close-msg'>X</span>
-                                <p>Thank you for your enquiry. A member of our team will contact you shortly.</p>
-                            </div>-->
+                            <!--                            <div class='success-message'>
+                                                            <span class='close-msg'>X</span>
+                                                            <p>Thank you for your enquiry. A member of our team will contact you shortly.</p>
+                                                        </div>-->
                         </div>
                     </div>
-                    
+
                     <div class="contact-map full-width">
                         <div class="full-width pull-left google-maps ">
                             <div id="map"></div>
@@ -308,32 +320,40 @@
                 <p>Copyright@ Niyas <script type="text/javascript">document.write(new Date().getFullYear());</script>. All rights reserved.</p>
             </footer>
         </div>
-		
-		<!-- Scripts -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg6OhVq70qcj1Hc2jNan8zin2-tC4SX0I&sensor=false"></script>
+
+        <!-- Scripts -->
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg6OhVq70qcj1Hc2jNan8zin2-tC4SX0I&sensor=false"></script>
         <script src="script/scrollIt.js" type="text/javascript"></script>
         <script type="text/javascript" src="components/formsubmit.js"></script>
         <script src="script/jquery.circliful.js"></script>
         <script src="script/niyas.js" language="javascript" type="text/javascript"></script>
         <script type="text/javascript" src="script/jquery.pajinate.js"></script>
-		
+
         <!-- for scaling UI buttons (for wide websites on small screens), include FlameViewportScale -->
         <script type="text/javascript" language="javascript" src="script/FlameViewportScale.js"></script>
-		
+
         <!-- include Tos "R"Us -->
         <script type="text/javascript" language="javascript" src="script/jquery.tosrus.min.all.js"></script>
-		
-		<!-- Google Analytics -->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-68130482-1', 'auto');
-		  ga('send', 'pageview');
+        <!-- Google Analytics -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-		</script>
+            ga('create', 'UA-68130482-1', 'auto');
+            ga('send', 'pageview');
 
+        </script>
+        
     </body>
 </html>

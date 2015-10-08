@@ -89,7 +89,9 @@ $(document).ready(function () {
     /* Initialize Google maps */
     initialize();
 });
-/* google map  */
+
+
+/*********************** Google Map ***************************/
 var marker;
 var map;
 
@@ -99,8 +101,7 @@ function initialize() {
         //center:new google.maps.LatLng(22.528610, 88.365451), //bangalore
         zoom: 14,
         mapTypeControl: false,
-		scrollwheel: false,
-		
+	scrollwheel: false,	
         //scaleControl: false,
         panControl: false,
         streetViewControl: false,
@@ -167,6 +168,4 @@ function changeMarkerPos(lat, lon) {
 //        ev.preventDefault();
 //    } );
 //} );
-
-
-
+/*********************** Google Map Ends Here ***************************/

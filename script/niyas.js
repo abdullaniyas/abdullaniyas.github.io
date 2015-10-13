@@ -142,7 +142,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById("map"), mapProp);
 
     marker = new google.maps.Marker({
-        position: new google.maps.LatLng(12.857041, 74.860016),
+        position: new google.maps.LatLng(25.277241, 55.341358),
         animation: google.maps.Animation.DROP,
         mapTypeControl: false
     });

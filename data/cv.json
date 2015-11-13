@@ -1,0 +1,6 @@
+{
+    "records":[ 
+        {"Name":"HTML 5","dimension":"135","text":"85%","width":"22","fontsize":"22","percent":"90","fgcolor":"#FFAE00","bgcolor":"#4a4a4a","fill":"#232323"},
+        {"Name":"CSS 3","dimension":"135","text":"85%","width":"22","fontsize":"22","percent":"90","fgcolor":"#FFAE00","bgcolor":"#4a4a4a","fill":"#232323"}
+        ]
+}

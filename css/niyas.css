@@ -564,7 +564,7 @@ thumbs img
 }
 .w-exp-details {
     color: #fff;
-    padding: 0 100px;
+    padding: 0 100px 50px;
     overflow: auto;
     height: 400px;
 }

@@ -44,6 +44,18 @@ $(document).ready(function () {
             });
             slideR = 0;
         }
+        
+        if (screenWidth < 600 ){
+            $('.menu-items ul li a').on('click', function () {
+                $('.menu-items').css("display", "none");
+                $('.minus-sign').hide();
+                $('.plus-sign').show();
+                slideR = 0;
+            });
+        }
+        
+        
+        
     });
 
     /* Tabs */
@@ -56,15 +68,29 @@ $(document).ready(function () {
         $('.panels').hide();
         $('.' + panel_to_show).show();
     });
+    
+    
+    /* Exp Tabs */
+    $('.work-exp-menu').on('click', function () {
+        $('.w-exp-cont-main').show();
+        var panel_to_show = $(this).attr('data-name');
+        $('.w-exp-details').hide();
+        $('.' + panel_to_show).show();
+    });
+    
+    $('.w-exp-close').on('click', function () {
+        $('.w-exp-cont-main').hide();
+    });
 
     /* Pagination */
     
     $('#paging_container3').pajinate({
         items_per_page : 6,
         item_container_id : '.alt_content',
-        nav_panel_id : '.alt_page_navigation'
-					
+        nav_panel_id : '.alt_page_navigation'				
     });
+    
+    
     /* Function for photography pop up and slide */
     //	Add a custom filter to recognize images from lorempixel (that don't end with ".jpg" or something similar)
 //    $.tosrus.defaults.media.image = {

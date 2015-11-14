@@ -777,7 +777,9 @@ footer p {
         .w-exp-details {
             padding: 0 50px;
         }
-    
+        .contact-form {
+            width: 100%;
+        }
 }
 @media screen and (max-width:480px) {
     .my-name h1 {
@@ -799,5 +801,14 @@ footer p {
         margin: 0 auto;
         width: 75%;
     }
+    .skills-meter {
+        margin: 10px 28%;
+    }
     
 }
+@media screen and (max-width:310px) {
+    .skills-meter {
+        margin: 10px 10%;
+    }
+}
+

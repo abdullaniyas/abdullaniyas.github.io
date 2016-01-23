@@ -29,11 +29,13 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <script>
-        var app = angular.module('myApp', []);
-        app.controller('customersCtrl', function($scope, $http) {
-            $http.get("data/cv.json")
-            .success(function (response) {$scope.cvs = response.records;});
-        });
+            var app = angular.module('myApp', []);
+            app.controller('customersCtrl', function ($scope, $http) {
+                $http.get("data/cv.json")
+                        .success(function (response) {
+                            $scope.cvs = response.records;
+                        });
+            });
         </script>
     </head>
     <body>
@@ -62,7 +64,8 @@
                             <li><a href="components/abdullaniyas.pdf" target="_blank">Download Resume</a></li>
                             <!--<li><a href="#">Blog</a></li>-->
                             <li><a data-scroll-nav="4">Skills</a></li>
-                            <li><a data-scroll-nav="5">Contact</a></li>
+                            <li><a data-scroll-nav="5">Work Experience</a></li>
+                            <li><a data-scroll-nav="6">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,9 +94,9 @@
                     <div class="ws_shadow"></div>
                 </div>-->
 
-                <div class="home yellow" data-scroll-index="2">
-                    <h1>ABDULLA NIYAS</h1>
-                    <h5>Web Developer</h5>
+                <div class="home" data-scroll-index="2">
+                    <h1>About Me</h1>
+<!--                    <h5>Web Developer</h5>-->
                     <p>A motivated, ambitious, proactive, focused individual with 3 years experience in web development. With experience working in a structured environment incorporating: analysis, design fixes, coding standards, code review, quality assurance, source code management and documentation. I have worked in a live environment. I possess excellent interpersonal, communication, time management skills, co-ordination and leadership skills; also have the ability to multi-task and prioritise with a professional attitude working under pressure with minimal supervision to meet strict deadlines.<br />Basically from Mangalore, I have received my graduation in B.E Computer Science from <a href="http://mite.ac.in" target="_blank">MITE</a>.
                     </p>
                 </div>
@@ -109,7 +112,7 @@
                     <div class="portfolio-tab">
                         <div class="web-tab panels full-width pull-left">
                             <div class="grid">
-                                
+
                                 <figure class="effect-ming">
                                     <img src="images/websites/khaled.PNG" alt="img03"/>
                                     <figcaption>
@@ -126,7 +129,7 @@
                                         <a href="http://agesdatasolutions.com/" target="_blank">View more</a>
                                     </figcaption>			
                                 </figure>
-								<figure class="effect-ming">
+                                <figure class="effect-ming">
                                     <img src="images/websites/groupl.png" alt="img01"/>
                                     <figcaption>
                                         <h2>GROUP<span>L</span></h2>
@@ -189,11 +192,11 @@
                             <h1>Skills</h1>
                             <div class="center-div width-83p" >
                                 <div class="full-width pull-left" >
-                                <!--<div class="full-width pull-left" ng-app="myApp" ng-controller="customersCtrl">
-                                    <div class="skills-meter" ng-repeat="x in cvs">
-                                        <div class="myStat pull-left" data-dimension="{{ x.dimension }}" data-text="{{ x.text }}" data-info="" data-width="{{ x.width }}" data-fontsize="{{ x.fontsize }}" data-percent="{{ x.percent }}" data-fgcolor="{{ x.fgcolor }}" data-bgcolor="{{ x.bgcolor }}" data-fill="{{ x.fill }}"></div>
-                                        <p>{{ x.Name }}</p>
-                                    </div>-->
+                                    <!--<div class="full-width pull-left" ng-app="myApp" ng-controller="customersCtrl">
+                                        <div class="skills-meter" ng-repeat="x in cvs">
+                                            <div class="myStat pull-left" data-dimension="{{ x.dimension }}" data-text="{{ x.text }}" data-info="" data-width="{{ x.width }}" data-fontsize="{{ x.fontsize }}" data-percent="{{ x.percent }}" data-fgcolor="{{ x.fgcolor }}" data-bgcolor="{{ x.bgcolor }}" data-fill="{{ x.fill }}"></div>
+                                            <p>{{ x.Name }}</p>
+                                        </div>-->
                                     <div class="skills-meter">
                                         <div class="myStat pull-left" data-dimension="135" data-text="90%" data-info="" data-width="22" data-fontsize="22" data-percent="90" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>HTML 5</p>
@@ -203,11 +206,7 @@
                                         <p>CSS 3</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
-                                        <p>PHP</p>
-                                    </div>
-                                    <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="85" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="85%" data-info="" data-width="22" data-fontsize="22" data-percent="85" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>JAVA SCRIPT</p>
                                     </div>
                                     <div class="skills-meter">
@@ -215,23 +214,27 @@
                                         <p>JQUERY</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="65%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>ANGULAR JS</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="65%" data-info="" data-width="22" data-fontsize="22" data-percent="60" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <p>PHP</p>
+                                    </div>
+                                    <div class="skills-meter">
+                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>AJAX</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="70%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="75%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>JSON</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="80%" data-info="" data-width="22" data-fontsize="22" data-percent="85" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="80%" data-info="" data-width="22" data-fontsize="22" data-percent="80" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>GitHub</p>
                                     </div>
                                     <div class="skills-meter">
-                                        <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="75" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
+                                        <div class="myStat pull-left" data-dimension="135" data-text="60%" data-info="" data-width="22" data-fontsize="22" data-percent="60" data-fgcolor="#FFAE00" data-bgcolor="#4a4a4a" data-fill="#232323"></div>
                                         <p>PHOTOSHOP</p>
                                     </div>
 
@@ -239,7 +242,9 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="expe dark-back2" data-scroll-index="5">
+                    <div class="globe"></div>
                     <div class="resume-inner work-experience">
                         <div class="full-width pull-left">
                             <h1>Work Experience</h1>
@@ -251,15 +256,14 @@
                                 </div>
                                 <div class="work-exp">
                                     <h2><p class="work-exp-menu" data-name="exp-perform">Perform Media</p><span  class="work-read">Click To Read</span></h2>
-                                    <h3>Web Developer</h3> 
+                                    <h3>Web Engineer</h3> 
                                     <h5>Period: 07/2015 - Present</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="contact yellow" data-scroll-index="5">
+                <div class="contact" data-scroll-index="6">
                     <div class="contact-form">
                         <h1>Contact</h1>
                         <ul class="social-icons">
@@ -323,7 +327,7 @@
                         <div class="w-exp-details exp-webswats">
                             <h3>Webswats pvt ltd (Web Developer from April-2013 to June-2014)</h3>
                             Website:<a href="http://www.webswats.com/"> http://www.webswats.com/</a> 
-                            
+
                             <ul>
                                 <li>Responsible entirely for developing the websites which are mobile responsive using PHP, HTML5, CSS3, Twitter Bootstrap, JavaScript, jQuery, jQuery mobile as the framework, GitHub, and few backend modules using yii framework.</li>
                                 <li>Develop Websites which are mobile responsive by cross checking different Mobile devices and their browsers.</li>
@@ -336,18 +340,18 @@
                         </div>
                         <div class="w-exp-details exp-perform">
                             <div>
-                            <h3>PERFORM MEDIA GROUP (Web Developer from JULY-2014 to Present</h3>
-                            Website:<a href="http://www.webswats.com/"> http://www.performgroup.co.uk/</a>
-                            <ul>
-                                <li>Manage, re-design and maintenance of over 150 websites driven by Perform’s Bespoke Content Management System using HTML, CSS, Javascript, PHP, XSLT, JQUERY, FreeMarker, , GitHub and SQL.</li>
-                                <li>Develop from scratch or Convert the existing websites to mobile responsive by cross checking different Mobile devices and their browsers.</li>
-                                <li>Troubleshot developers code based on looking at the code and the ability to find the error that will fix issues.</li>
-                                <li>Implement updates on clients site as per requirement.</li>
-                                <li>Evaluate code to ensure it is valid and compatible across different browsers.</li>
-                                <li>Operational monitoring and troubleshooting live events within agreed SLA.</li>
-                                <li>Provide support to external webmasters and end users.</li>
-                            </ul>
-                            <p>Websites worked on:  <a href="http://www.en.beinsports.net">http://www.en.beinsports.net</a>, <a href="http://www.beinsports.fr/">http://www.beinsports.fr/</a>, <a href="http://www.tennistv.com/">http://www.tennistv.com/</a>, <a href="http://www.directvsports.net/">http://www.directvsports.net/</a>, <a href="http://www.nasl.com/">http://www.nasl.com/</a>, <a href="http://www.sportal.com.au/">http://www.sportal.com.au/</a>, <a href="http://www.viking-fk.no/">http://www.viking-fk.no/</a>, <a href="http://www.footballaustralia.com.au/">http://www.footballaustralia.com.au/</a>, <a href="http://www.avfc.co.uk/">http://www.avfc.co.uk/</a>, <a href="http://www.performgroup.co.uk/">http://www.performgroup.co.uk/</a> and few more clients of the Perform</p>
+                                <h3>PERFORM MEDIA GROUP (Web Developer from JULY-2014 to Present</h3>
+                                Website:<a href="http://www.webswats.com/"> http://www.performgroup.co.uk/</a>
+                                <ul>
+                                    <li>Manage, re-design and maintenance of over 150 websites driven by Perform’s Bespoke Content Management System using HTML, CSS, Javascript, PHP, XSLT, JQUERY, FreeMarker, , GitHub and SQL.</li>
+                                    <li>Develop from scratch or Convert the existing websites to mobile responsive by cross checking different Mobile devices and their browsers.</li>
+                                    <li>Troubleshot developers code based on looking at the code and the ability to find the error that will fix issues.</li>
+                                    <li>Implement updates on clients site as per requirement.</li>
+                                    <li>Evaluate code to ensure it is valid and compatible across different browsers.</li>
+                                    <li>Operational monitoring and troubleshooting live events within agreed SLA.</li>
+                                    <li>Provide support to external webmasters and end users.</li>
+                                </ul>
+                                <p>Websites worked on:  <a href="http://www.en.beinsports.net">http://www.en.beinsports.net</a>, <a href="http://www.beinsports.fr/">http://www.beinsports.fr/</a>, <a href="http://www.tennistv.com/">http://www.tennistv.com/</a>, <a href="http://www.directvsports.net/">http://www.directvsports.net/</a>, <a href="http://www.nasl.com/">http://www.nasl.com/</a>, <a href="http://www.sportal.com.au/">http://www.sportal.com.au/</a>, <a href="http://www.viking-fk.no/">http://www.viking-fk.no/</a>, <a href="http://www.footballaustralia.com.au/">http://www.footballaustralia.com.au/</a>, <a href="http://www.avfc.co.uk/">http://www.avfc.co.uk/</a>, <a href="http://www.performgroup.co.uk/">http://www.performgroup.co.uk/</a> and few more clients of the Perform</p>
                             </div>
                         </div>
                     </div>
@@ -360,7 +364,7 @@
         </div>
 
         <!-- Scripts -->
-        
+
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg6OhVq70qcj1Hc2jNan8zin2-tC4SX0I&sensor=false"></script>
         <script src="script/scrollIt.js" type="text/javascript"></script>
         <script type="text/javascript" src="components/formsubmit.js"></script>
@@ -376,22 +380,22 @@
 
         <!-- Google Analytics -->
         <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-            ga('create', 'UA-68130482-1', 'auto');
-            ga('send', 'pageview');
+                    ga('create', 'UA-68130482-1', 'auto');
+                    ga('send', 'pageview');
 
         </script>
-        
+
     </body>
 </html>

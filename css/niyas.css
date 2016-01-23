@@ -656,7 +656,7 @@ expe {
     background-image: url(../images/linkedin_b.png);
 }
 .instagram {
-    background-image: url(../images/rss_b.png);
+    background-image: url(../images/insta_b.png);
 }
 .twitter {
     background-image: url(../images/twitter_b.png);
@@ -669,7 +669,7 @@ expe {
     background-image: url(../images/linkedin_w.png);
 }
 .instagram:hover {
-    background-image: url(../images/rss_w.png);
+    background-image: url(../images/insta_w.png);
 }
 .twitter:hover {
     background-image: url(../images/twitter_w.png);

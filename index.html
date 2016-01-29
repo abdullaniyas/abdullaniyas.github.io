@@ -22,21 +22,12 @@
         <link rel="stylesheet" type="text/css" href="css/set2.css" />
         <link type="text/css" rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/niyas.css" />
-        <!-- Jquery CDN -->
+        <!-- Jquery CDN --
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script>
-            var app = angular.module('myApp', []);
-            app.controller('customersCtrl', function ($scope, $http) {
-                $http.get("data/cv.json")
-                        .success(function (response) {
-                            $scope.cvs = response.records;
-                        });
-            });
-        </script>
     </head>
     <body>
         <div class="back-to-top" data-scroll-goto="0"></div>

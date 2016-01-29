@@ -82,13 +82,6 @@ $(document).ready(function () {
         $('.w-exp-cont-main').hide();
     });
 
-    /* Pagination */
-    
-    $('#paging_container3').pajinate({
-        items_per_page : 6,
-        item_container_id : '.alt_content',
-        nav_panel_id : '.alt_page_navigation'				
-    });
     
     
     /* Function for photography pop up and slide */
@@ -110,12 +103,22 @@ $(document).ready(function () {
     
     /* Skills Indicator in percentage */
     $('.myStat').circliful();
-
+    /* Load Photography */
+    $('.photography').on('click', function () {
+        $.ajax({
+            url: 'components/photo.html',
+            success: function(response) {
+                $('.photo-tab').html(response);
+               // alert('Done.');
+             },error:function(){
+              alert("Photo Tab Error");
+           }
+        });
+    });
     //google.maps.event.addDomListener(window, 'load', initialize);
     /* Initialize Google maps */
     initialize();
 });
-
 
 /*********************** Google Map ***************************/
 var marker;

@@ -9,7 +9,7 @@ body {
 .red { background-color: red; }
 .blue { background-color: blue; }
 .green { background-color: green; }
-.yellow { background-color: #FFAE00; }
+.yellow { background-color: #FDCF00; }
 .dark-back { background-color: #101010;}
 .dark-back2 { background-color: #000; }
 .clear {
@@ -218,7 +218,6 @@ header {
 .menu-items {
     width: 0%;
     right: 67px;
-    background-color: #FFAE00;
     height: 57px;
     position: absolute;
     margin-top: 10px;
@@ -240,8 +239,9 @@ header {
     display: block;
     padding: 17px 27px;
     transition: background-color 0.3s ease 0s;
-    background-color: #FFAE00;
+/*    background-color: #FDCF00;*/
     color: #fff;
+    cursor: pointer;
 }
 .menu-items ul li a:hover {
     background-color: #171717;

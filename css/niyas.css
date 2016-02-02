@@ -219,7 +219,7 @@ header {
     width: 0%;
     right: 67px;
     background-color: #FFAE00;
-    height: 57px;
+    height: 56px;
     position: absolute;
     margin-top: 10px;
     display: none;
@@ -321,7 +321,7 @@ section > div {
     margin: 56px auto 34px;
 }
 .portfolio-menu {
-    width: 220px;
+    width: 260px;
 }
 .portfolio-menu ul {
     padding: 0;

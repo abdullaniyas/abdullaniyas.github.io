@@ -92,13 +92,13 @@ $(document).ready(function () {
 //        }
 //    };
 
-    $('#example-1 a').tosrus({
-        buttons: 'inline',
-        pagination	: {
-            add			: true,
-            type		: 'thumbnails'
-        }
-    });
+//    $('#example-1 a').tosrus({
+//        buttons: 'inline',
+//        pagination	: {
+//            add			: true,
+//            type		: 'thumbnails'
+//        }
+//    });
     
     
     /* Skills Indicator in percentage */
@@ -109,10 +109,20 @@ $(document).ready(function () {
             url: 'components/photo.html',
             success: function(response) {
                 $('.photo-tab').html(response);
+                
+                $('#example-1 a').tosrus({
+                    buttons: 'inline',
+                    pagination	: {
+                        add			: true,
+                        type		: 'thumbnails'
+                    }
+                });
                // alert('Done.');
              },error:function(){
               alert("Photo Tab Error");
            }
+           
+           
         });
     });
     //google.maps.event.addDomListener(window, 'load', initialize);

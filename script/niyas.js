@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     /* Menu Item Slide */
-    
+
     $(function(){
         $.scrollIt({
             topOffset: -30
@@ -37,14 +37,14 @@ $(document).ready(function () {
             $('.minus-sign').hide();
             $('.plus-sign').show();
             $('.menu-items').animate({
-                right: '57px', 
+                right: '57px',
                 width: '0'
             }, function () {
                 $('.menu-items').css("display", "none");
             });
             slideR = 0;
         }
-        
+
         if (screenWidth < 600 ){
             $('.menu-items ul li a').on('click', function () {
                 $('.menu-items').css("display", "none");
@@ -53,9 +53,9 @@ $(document).ready(function () {
                 slideR = 0;
             });
         }
-        
-        
-        
+
+
+
     });
 
     /* Tabs */
@@ -68,8 +68,8 @@ $(document).ready(function () {
         $('.panels').hide();
         $('.' + panel_to_show).show();
     });
-    
-    
+
+
     /* Exp Tabs */
     $('.work-exp-menu').on('click', function () {
         $('.w-exp-cont-main').show();
@@ -77,13 +77,13 @@ $(document).ready(function () {
         $('.w-exp-details').hide();
         $('.' + panel_to_show).show();
     });
-    
+
     $('.w-exp-close').on('click', function () {
         $('.w-exp-cont-main').hide();
     });
 
-    
-    
+
+
     /* Function for photography pop up and slide */
     //	Add a custom filter to recognize images from lorempixel (that don't end with ".jpg" or something similar)
 //    $.tosrus.defaults.media.image = {
@@ -99,8 +99,8 @@ $(document).ready(function () {
 //            type		: 'thumbnails'
 //        }
 //    });
-    
-    
+
+
     /* Skills Indicator in percentage */
     $('.myStat').circliful();
     /* Load Photography */
@@ -109,7 +109,7 @@ $(document).ready(function () {
             url: 'components/photo.html',
             success: function(response) {
                 $('.photo-tab').html(response);
-                
+
                 $('#example-1 a').tosrus({
                     buttons: 'inline',
                     pagination	: {
@@ -121,8 +121,8 @@ $(document).ready(function () {
              },error:function(){
               alert("Photo Tab Error");
            }
-           
-           
+
+
         });
     });
     //google.maps.event.addDomListener(window, 'load', initialize);
@@ -140,7 +140,7 @@ function initialize() {
         //center:new google.maps.LatLng(22.528610, 88.365451), //bangalore
         zoom: 14,
         mapTypeControl: false,
-	scrollwheel: false,	
+	scrollwheel: false,
         //scaleControl: false,
         panControl: false,
         streetViewControl: false,
@@ -181,7 +181,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById("map"), mapProp);
 
     marker = new google.maps.Marker({
-        position: new google.maps.LatLng(12.857041, 74.860016),
+        position: new google.maps.LatLng(12.9716, 77.5946),
         animation: google.maps.Animation.DROP,
         mapTypeControl: false
     });
